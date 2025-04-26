@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor YouTube a MP3</title>
+    <script defer src="script.js"></script> <!-- Aquí enlazamos el script externo -->
+    <style>
+        .url-row {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .url-row input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Introduce uno o más enlaces de YouTube</h2>
+    
+    <!-- Formulario para URLs -->
+    <div id="urls-container">
+        <div class="url-row">
+            <input type="text" class="url-input" placeholder="Pega el enlace aquí">
+            <button onclick="eliminarFila(this)">Eliminar</button>
+        </div>
+    </div>
+
+    <button onclick="agregarFila()">+ Añadir más enlaces</button><br><br>
+    <button onclick="convertir()">Convertir</button>
+
+    <div id="messages"></div>
+</body>
+</html>
